@@ -21,7 +21,7 @@ namespace shooterP21120
     {
         SoundPlayer sp,spc;
         public List<int> myScores = new List<int>();
-        bool moveLeft, moveRight,shooting;
+        bool gameOver, moveLeft, moveRight,shooting;
         int speed = 30;
         int enemySpeed, score, bulletSpeed;
         Random r = new Random();
@@ -55,11 +55,9 @@ namespace shooterP21120
 
             if (enemy1.Top>630 || enemy2.Top>630|| enemy3.Top > 630)
             {
-                spc.Play();
                 endGame();
-                
             }
-
+                
             if (moveLeft == true && player.Left > 5)
             {
                 player.Left -= speed;
@@ -92,7 +90,7 @@ namespace shooterP21120
                 score += 1;
                 shooting = false;
                 enemy1.Top = -300;
-                enemy1.Left = r.Next(10, 970);
+                enemy1.Left = r.Next(10, 1100); 
             }
      
             if (bullet.Bounds.IntersectsWith(enemy2.Bounds))
@@ -101,7 +99,7 @@ namespace shooterP21120
                 score += 1;
                 shooting = false;
                 enemy2.Top = -550;
-                enemy2.Left = r.Next(10, 970);
+                enemy2.Left = r.Next(10, 1100);
             }
                 
                 
@@ -111,7 +109,7 @@ namespace shooterP21120
                 score += 1;
                 shooting = false;
                 enemy3.Top = -650;
-                enemy3.Left = r.Next(10, 970);
+                enemy3.Left = r.Next(10,1100);
             }
                 
                 
@@ -203,6 +201,16 @@ namespace shooterP21120
                 bullet.Top = player.Top - 55;
                 bullet.Left = player.Left +38;
             }
+            if (e.KeyCode == Keys.Enter && gameOver == true)
+            {
+                resetGame();
+            }
+            if (e.KeyCode ==Keys.Back && gameOver == true)
+            {
+                Form1 form1 = new Form1(score);
+                form1.Show();
+                this.Close();
+            }
         }
 
         private void resetGame()
@@ -210,26 +218,42 @@ namespace shooterP21120
             gameTimer.Start();
             enemySpeed = 5;
 
-            enemy1.Left = r.Next(10, 970);
-            enemy2.Left = r.Next(10, 970);
-            enemy3.Left = r.Next(10, 970);
+            enemy1.Left = r.Next(10, 1100);
+            enemy2.Left = r.Next(10, 1100);
+            enemy3.Left = r.Next(10, 1100);
 
             enemy1.Top = r.Next(0, 300) * -1;
             enemy2.Top = r.Next(0, 600) * -1;
             enemy3.Top = r.Next(0, 900) * -1;
             score = 0;
+            playerScore.Text = score.ToString();
             bulletSpeed = 0;
             bullet.Left = -300;
+            shooting = false;
 
+            enemy1.Show();
+            enemy2.Show();
+            enemy3.Show();
+            errorMess.Hide();
+            bullet.Show();
+            player.Show();
         }
+
 
         private void endGame()
         {
-            Form1 f1 = new Form1(score);
-            f1.Show();
-            this.Close();
-            gameTimer.Stop();
+            spc.Play();
+            shooting = true;
+            gameOver = true;
             sendData();
+            gameTimer.Stop();
+            playerScore.Text += Environment.NewLine +Environment.NewLine + "Press Enter to Play Again" + Environment.NewLine + Environment.NewLine + "Press BackSpace for Main Menu";
+            errorMess.Show();
+            enemy1.Hide();
+            enemy2.Hide();
+            enemy3.Hide();
+            bullet.Hide();
+            player.Hide();
         }
 
             
@@ -244,6 +268,10 @@ namespace shooterP21120
         }
     }
 }
+                
+                
+                
+
             
            
             

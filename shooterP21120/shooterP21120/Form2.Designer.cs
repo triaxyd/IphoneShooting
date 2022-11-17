@@ -37,6 +37,7 @@
             this.enemy3 = new System.Windows.Forms.PictureBox();
             this.playerScore = new System.Windows.Forms.Label();
             this.bullet = new System.Windows.Forms.PictureBox();
+            this.errorMess = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.enemy2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.enemy1)).BeginInit();
@@ -97,11 +98,11 @@
             // playerScore
             // 
             this.playerScore.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.playerScore.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.playerScore.Location = new System.Drawing.Point(0, 391);
+            this.playerScore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(250)))), ((int)(((byte)(230)))));
+            this.playerScore.Location = new System.Drawing.Point(0, 357);
             this.playerScore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.playerScore.Name = "playerScore";
-            this.playerScore.Size = new System.Drawing.Size(1798, 175);
+            this.playerScore.Size = new System.Drawing.Size(1800, 244);
             this.playerScore.TabIndex = 5;
             this.playerScore.Text = "Score";
             this.playerScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -117,12 +118,25 @@
             this.bullet.TabIndex = 6;
             this.bullet.TabStop = false;
             // 
+            // errorMess
+            // 
+            this.errorMess.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.errorMess.Font = new System.Drawing.Font("Bodoni MT", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.errorMess.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.errorMess.Location = new System.Drawing.Point(-1, 247);
+            this.errorMess.Name = "errorMess";
+            this.errorMess.Size = new System.Drawing.Size(1800, 110);
+            this.errorMess.TabIndex = 7;
+            this.errorMess.Text = "YOU LOST";
+            this.errorMess.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(22)))), ((int)(((byte)(20)))));
             this.ClientSize = new System.Drawing.Size(1800, 1000);
+            this.Controls.Add(this.errorMess);
             this.Controls.Add(this.player);
             this.Controls.Add(this.enemy3);
             this.Controls.Add(this.enemy1);
@@ -155,5 +169,6 @@
         private System.Windows.Forms.PictureBox enemy3;
         private System.Windows.Forms.Label playerScore;
         private System.Windows.Forms.PictureBox bullet;
+        private System.Windows.Forms.Label errorMess;
     }
 }
