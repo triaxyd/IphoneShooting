@@ -1,0 +1,13 @@
+C:\Users\trian\source\repos\shooterP21120\shooterP21120\bin\Debug\shooterP21120.exe.config
+C:\Users\trian\source\repos\shooterP21120\shooterP21120\bin\Debug\shooterP21120.exe
+C:\Users\trian\source\repos\shooterP21120\shooterP21120\bin\Debug\shooterP21120.pdb
+C:\Users\trian\source\repos\shooterP21120\shooterP21120\obj\Debug\shooterP21120.csproj.AssemblyReference.cache
+C:\Users\trian\source\repos\shooterP21120\shooterP21120\obj\Debug\shooterP21120.csproj.SuggestedBindingRedirects.cache
+C:\Users\trian\source\repos\shooterP21120\shooterP21120\obj\Debug\shooterP21120.Form1.resources
+C:\Users\trian\source\repos\shooterP21120\shooterP21120\obj\Debug\shooterP21120.Properties.Resources.resources
+C:\Users\trian\source\repos\shooterP21120\shooterP21120\obj\Debug\shooterP21120.csproj.GenerateResource.cache
+C:\Users\trian\source\repos\shooterP21120\shooterP21120\obj\Debug\shooterP21120.csproj.CoreCompileInputs.cache
+C:\Users\trian\source\repos\shooterP21120\shooterP21120\obj\Debug\shooterP21120.exe
+C:\Users\trian\source\repos\shooterP21120\shooterP21120\obj\Debug\shooterP21120.pdb
+C:\Users\trian\source\repos\shooterP21120\shooterP21120\obj\Debug\shooterP21120.Form2.resources
+C:\Users\trian\source\repos\shooterP21120\shooterP21120\obj\Debug\shooterP21120.Form3.resources
